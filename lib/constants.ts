@@ -11,6 +11,7 @@ export const siteConfig = {
 
 export const mainNav = [
   { title: "소개", href: "/about" },
-  { title: "연락처", href: "/contact" },
   { title: "기능", href: "/feature" },
+  { title: "예제", href: "/examples" },
+  { title: "연락처", href: "/contact" },
 ];
