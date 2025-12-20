@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Mail, MessageSquare, Github } from "lucide-react"
+import { Mail, Github } from "lucide-react"
+import { ContactForm } from "@/components/marketing/contact-form"
 
 export const metadata: Metadata = {
   title: "연락처",
@@ -65,55 +65,7 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <MessageSquare className="h-5 w-5" />
-              <CardTitle>메시지 보내기</CardTitle>
-            </div>
-            <CardDescription>
-              아래 양식을 작성하여 메시지를 보내주세요
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium">
-                이름
-              </label>
-              <input
-                id="name"
-                type="text"
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                placeholder="홍길동"
-              />
-            </div>
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium">
-                이메일
-              </label>
-              <input
-                id="email"
-                type="email"
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                placeholder="email@example.com"
-              />
-            </div>
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
-                메시지
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                placeholder="문의 내용을 입력해주세요..."
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              메시지 전송
-            </Button>
-          </CardContent>
-        </Card>
+        <ContactForm />
       </div>
     </div>
   )
